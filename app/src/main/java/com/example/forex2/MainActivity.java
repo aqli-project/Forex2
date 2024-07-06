@@ -103,6 +103,9 @@ public class MainActivity extends AppCompatActivity {
 
                 JSONObject rates;
 
+                long timestamp = System.currentTimeMillis() / 1000;
+                setTimestamp(timestamp);
+
                 try {
                     rates = root.getJSONObject("rates");
                 }catch (JSONException e){
